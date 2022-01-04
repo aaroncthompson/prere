@@ -1,0 +1,10 @@
+[Unit]
+Description=simple service that captures runtime data before shutdown
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/opt/dsio/prere/prere.sh
+
+[Install]
+WantedBy=multi-user.target
